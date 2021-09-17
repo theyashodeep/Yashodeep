@@ -26,7 +26,6 @@ class ScannerDemo10
      	System.out.println("Please Enter Valid Choice");
      }
 
-	}
 	static double area(double rad)
 	{
 	double result=(3.14*rad*rad);
@@ -37,7 +36,7 @@ class ScannerDemo10
 	{
 	
 	double result=(2*3.14*rad);
-	System.out.println("Circumference Of Circle");
+	System.out.println("Circumference Of Circle" + result);
 	return result;
 	}
 }	
