@@ -1,0 +1,47 @@
+package Strings;
+
+import java.util.*;
+public class main {
+    public static void main (String [] args){
+        String variable;
+        System.out.println("Please enter some string ");
+        Scanner obj = new Scanner (System.in);
+        variable = obj.nextLine();
+        int stringLength= variable.length();
+
+        if( stringLength%3==0){
+            int div = stringLength/3;
+            for (int i=0; i<stringLength; i++ )
+            {
+                System.out.print(variable.substring(i, i+div)+" ");
+            }
+        }
+        else if ( stringLength%3==1){
+            int div = stringLength/3;
+            int j=0;
+            for (int i=0;i<stringLength;i=i+div)
+            {
+                System.out.print(variable.substring(i,i++)+" ");
+                if(j==0) {
+                    System.out.print(variable.substring(i++, 2 * div + 1));
+                    i = i + div + 1;
+                    j++;
+                }
+                System.out.print(" ");
+                }
+            }
+        else if(stringLength%3==2){
+            int div= stringLength/3;
+            int j=0;
+            for(int i=0; i<stringLength; i=i+div)
+            {
+                System.out.print(variable.substring(i,i+1+div)+"");
+                if(j==0)
+                {
+                    System.out.print(" ");
+                    i=i+div+1;
+                }
+            }
+        }
+    }
+}
